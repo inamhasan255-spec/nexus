@@ -1,0 +1,62 @@
+https://nrqpyrquww2ho.ok.kimi.link
+the link for website 
+#!/usr/bin/env python3
+"""
+nexus: Solution entry point.
+
+Add your problem‑specific logic inside `solve()`.
+Keep all input/output in this file so it runs cleanly on judges.
+"""
+
+import sys
+from typing import List, Tuple
+
+
+def read_input() -> str:
+    """Read all input from stdin as a single string."""
+    data = sys.stdin.read()
+    return data
+
+
+def parse_input(raw: str):
+    """
+    Parse raw input into structured data.
+
+    Replace this with problem-specific parsing.
+    Example: first line = n, then n integers.
+    """
+    lines = raw.strip().splitlines()
+    if not lines:
+        return []
+    # Example parse:
+    # n = int(lines[0])
+    # arr = list(map(int, lines[1].split()))
+    # return n, arr
+    return lines
+
+
+def solve(parsed) -> str:
+    """
+    Core solution logic.
+
+    Replace the body with your algorithm.
+    Must return a string (without trailing newline) to print as output.
+    """
+    # Example placeholder: echo back something derived from parsed input.
+    if not parsed:
+        return "NO INPUT"
+
+    # Example logic: just join lines
+    result = "\n".join(parsed)
+    return result
+
+
+def main() -> None:
+    raw = read_input()
+    parsed = parse_input(raw)
+    ans = solve(parsed)
+    sys.stdout.write(str(ans))
+
+
+if __name__ == "__main__":
+    main()
